@@ -7,11 +7,7 @@ NAME		=	ex00
 OBJ			=	$(patsubst src%, obj%, $(SRC:.cpp=.o))
 
 SRC			=	src/main.cpp \
-				src/Animal.cpp \
-				src/Cat.cpp \
-				src/WrongCat.cpp \
-				src/WrongAnimal.cpp \
-				src/Dog.cpp
+				src/Bureaucrat.cpp
 
 CC			=	c++
 
