@@ -2,28 +2,46 @@
 
 int main(void)
 {
+	std::cout << "===========FIRST TEST===========" << std::endl;
 	{
 		Bureaucrat obj;
 
-		std::cout << obj;
+		std::cout << obj << std::endl;
 	}
-	std::cout << "===========OTHER TEST===========" << std::endl;
+	std::cout << "===========SECOND TEST===========" << std::endl;
 	{
 		Bureaucrat obj("Nuno", 150);
 
 		try
 		{
-			obj.decrementGrade();
+			obj.incrementGrade();
 		}
-		catch (const std::exception &e)
+		catch(std::exception & e)
 		{
-			std::cerr << e.what() << '\n';
+			std::cerr << e.what() << std::endl;
 		}
 		catch (...)
 		{
-			std::cerr << "An unknown error occurred.\n";
+			std::cerr << "An unknown error occurred" << std::endl;
+		}
+		
+		std::cout << obj;
+
+		try
+		{
+			obj.decrementGrade();
+			obj.decrementGrade();
+		}
+		catch(std::exception & e)
+		{
+			std::cerr << e.what() << std::endl;
+		}
+		catch (...)
+		{
+			std::cerr << "An unknown error occurred." << std::endl;
 		}
 		std::cout << obj;
 	}
+	std::cout << "===========END TEST===========" << std::endl;
 	return (0);
 }
